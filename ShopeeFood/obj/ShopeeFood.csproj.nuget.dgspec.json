@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dang.le.S3CORP\\source\\repos\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj": {}
+    "D:\\Projects\\dotnet\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dang.le.S3CORP\\source\\repos\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj": {
+    "D:\\Projects\\dotnet\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dang.le.S3CORP\\source\\repos\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj",
+        "projectUniqueName": "D:\\Projects\\dotnet\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj",
         "projectName": "ShopeeFood",
-        "projectPath": "C:\\Users\\dang.le.S3CORP\\source\\repos\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj",
+        "projectPath": "D:\\Projects\\dotnet\\ShopeeFoodApi\\ShopeeFood\\ShopeeFood.csproj",
         "packagesPath": "C:\\Users\\dang.le.S3CORP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dang.le.S3CORP\\source\\repos\\ShopeeFoodApi\\ShopeeFood\\obj\\",
+        "outputPath": "D:\\Projects\\dotnet\\ShopeeFoodApi\\ShopeeFood\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dang.le.S3CORP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.Azure.Management.BatchAI.Fluent": {
+              "target": "Package",
+              "version": "[1.38.1, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -69,6 +73,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

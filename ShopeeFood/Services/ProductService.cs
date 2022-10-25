@@ -9,15 +9,20 @@ namespace ShopeeFood.Services
 	public class ProductService : IProduct
 	{
 		private readonly todoAPIContext _todoContext;
-		public ProductService(todoAPIContext todoContext)
+		private readonly IUploadService _uploadService;
+		public ProductService(todoAPIContext todoContext, IUploadService uploadService)
 		{
 			_todoContext = todoContext;
+			_uploadService = uploadService;
 		}
 
 		public async Task<List<Product>> FindAll()
 		{
 			var products = await _todoContext.Products.ToListAsync();
-
+			foreach (var product in products)
+			{
+				product.Image = "data:image/png;base64," + _uploadService.GetImgFromLocal(product.Image);
+			}
 			return products;
 		}
 
@@ -28,7 +33,22 @@ namespace ShopeeFood.Services
 			{
 				return null;
 			}
+			product.Image = "data:image/png;base64," + _uploadService.GetImgFromLocal(product.Image);
 			return product;
+		}
+
+		public async Task<List<Product>> SearchProduct(string titleProduct)
+		{
+			var products = await _todoContext.Products.FromSqlRaw($"select * from products where NameProduct like '%{titleProduct}%'").ToListAsync();
+			if (products is null)
+			{
+				return new List<Product>();
+			}
+			foreach (var product in products)
+			{
+				product.Image = "data:image/png;base64," + _uploadService.GetImgFromLocal(product.Image);
+			}
+			return products;
 		}
 
 		public async Task<Product> FindByName(string theName)
@@ -38,6 +58,7 @@ namespace ShopeeFood.Services
 			{
 				return null;
 			}
+			item.Image = "data:image/png;base64," + _uploadService.GetImgFromLocal(item.Image);
 			return item;
 		}
 

@@ -11,5 +11,6 @@ namespace ShopeeFood.Interfaces
 		public void CreateItem(CreateProductDTO requestData);
 		public void UpdateItem(Product requestData);
 		public Task<bool> DeleteItem(int id);
+		public Task<List<Product>> SearchProduct(string titleProduct);
 	}
 }
