@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using ShopeeFood.Dtos;
-using ShopeeFood.Dtos.CartItem;
+using ShopeeFood.Dtos.CartItemDTO;
 using ShopeeFood.Interfaces;
 using ShopeeFood.Models;
 
 namespace ShopeeFood.Services
 {
-	public class CartItemService:ICartItem
+    public class CartItemService:ICartItem
 	{
 		private readonly todoAPIContext _todoAPIContext;
 		//public string ShoppingCartId { get; set; }

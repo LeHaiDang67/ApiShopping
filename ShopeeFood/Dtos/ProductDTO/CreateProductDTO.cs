@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ShopeeFood.Dtos
+namespace ShopeeFood.Dtos.ProductDTO
 {
 	public class CreateProductDTO
 	{

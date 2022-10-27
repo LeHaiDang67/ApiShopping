@@ -1,4 +1,4 @@
-﻿namespace ShopeeFood.Dtos.UploadFile
+﻿namespace ShopeeFood.Dtos.UploadFileDTO
 {
 	public class UploadRequestDTO
 	{

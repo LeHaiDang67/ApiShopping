@@ -1,12 +1,12 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using ShopeeFood.Dtos;
+using ShopeeFood.Dtos.ProductDTO;
 using ShopeeFood.Interfaces;
 using ShopeeFood.Models;
 
 namespace ShopeeFood.Services
 {
-	public class ProductService : IProduct
+    public class ProductService : IProduct
 	{
 		private readonly todoAPIContext _todoContext;
 		private readonly IUploadService _uploadService;

@@ -1,4 +1,4 @@
-﻿using ShopeeFood.Dtos;
+﻿using ShopeeFood.Dtos.ProductDTO;
 using ShopeeFood.Models;
 
 namespace ShopeeFood.Interfaces

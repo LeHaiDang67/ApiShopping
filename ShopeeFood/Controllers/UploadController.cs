@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ShopeeFood.Dtos.UploadFile;
+using ShopeeFood.Dtos.UploadFileDTO;
 using ShopeeFood.Interfaces;
 using System.Drawing.Imaging;
 

@@ -4,14 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using ShopeeFood.Dtos;
-using ShopeeFood.Dtos.CartItem;
+using ShopeeFood.Dtos.CartItemDTO;
 using ShopeeFood.Interfaces;
 using ShopeeFood.Models;
 
 namespace ShopeeFood.Controllers
 {
-	[ApiController]
+    [ApiController]
 	[Route("client/[controller]")]
 	[Authorize(AuthenticationSchemes = "Bearer")]
 	public class ShoppingCartController : Controller

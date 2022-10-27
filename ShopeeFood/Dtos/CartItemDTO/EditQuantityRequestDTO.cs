@@ -1,4 +1,4 @@
-﻿namespace ShopeeFood.Dtos.CartItem
+﻿namespace ShopeeFood.Dtos.CartItemDTO
 {
 	public class EditQuantityRequestDTO
 	{

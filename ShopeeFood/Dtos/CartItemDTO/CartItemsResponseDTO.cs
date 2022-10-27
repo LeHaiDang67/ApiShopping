@@ -1,6 +1,6 @@
 ﻿using ShopeeFood.Models;
 
-namespace ShopeeFood.Dtos.CartItem
+namespace ShopeeFood.Dtos.CartItemDTO
 {
 	public class CartItemsResponseDTO
 	{

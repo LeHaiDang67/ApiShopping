@@ -74,12 +74,11 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddCors(options =>
 {
-	options.AddPolicy(name: policyName,
-					  builder =>
+	options.AddPolicy(name: policyName, builder =>
 					  {
 						  builder
 							.WithOrigins("http://localhost:3000") // specifying the allowed origin
-							.WithMethods("GET","POST", "PUT", "DELETE") // defining the allowed HTTP method
+							.WithMethods("GET", "POST", "PUT", "DELETE") // defining the allowed HTTP method
 							.AllowAnyHeader(); // allowing any header to be sent
 					  });
 });
@@ -87,8 +86,11 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IProduct, ProductService>();
 builder.Services.AddScoped<ICartItem, CartItemService>();
 builder.Services.AddScoped<IUploadService, UploadService>();
+builder.Services.AddScoped<IUser, UserService>();
+builder.Services.AddScoped<IOrder, OrderService>();
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession(options => {
+builder.Services.AddSession(options =>
+{
 	options.Cookie.Name = "CartId";
 	options.IdleTimeout = TimeSpan.FromMinutes(1);
 	options.Cookie.HttpOnly = true;

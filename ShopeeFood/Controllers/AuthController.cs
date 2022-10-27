@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using ShopeeFood.Controllers.Dtos;
-using ShopeeFood.Dtos;
+using ShopeeFood.Dtos.AuthDTO;
+using ShopeeFood.Interfaces;
 using ShopeeFood.Models;
 using ShopeeFood.Services;
 using System.IdentityModel.Tokens.Jwt;
@@ -19,10 +19,12 @@ namespace ShopeeFood.Controllers
 	{
 		private readonly todoAPIContext _todoAPIContext;
 		private readonly IConfiguration _iConfiguration;
-		public AuthController(todoAPIContext todoAPIContext, IConfiguration iConfiguration)
+		private readonly IUser _iUser;
+		public AuthController(todoAPIContext todoAPIContext, IConfiguration iConfiguration, IUser iUser)
 		{
 			_todoAPIContext = todoAPIContext;
 			_iConfiguration = iConfiguration;
+			_iUser = iUser;
 		}
 
 		private JwtSecurityToken GetToken(User user)
@@ -155,6 +157,37 @@ namespace ShopeeFood.Controllers
 					RefreshToken = reToken
 				}
 			});
+		}
+
+		[HttpPost]
+		[Route("Register")]
+		public async Task<ActionResult> RegisterUser(RegisterRequestDTO requestData)
+		{
+			if(requestData == null)
+			{
+				return BadRequest(new
+				{
+					Success = false,
+					Message = "the request is null"
+				});
+			}
+			var result =  _iUser.Register(requestData);
+			if (result)
+			{
+				return Ok(new
+				{
+					Success = result,
+					Message = "Success"
+				});
+			} else
+			{
+				return BadRequest(new
+				{
+					Success = result,
+					Message = "Fail"
+				});
+			}
+			
 		}
 
 	}

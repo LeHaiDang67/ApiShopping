@@ -1,4 +1,4 @@
-﻿namespace ShopeeFood.Dtos.Product
+﻿namespace ShopeeFood.Dtos.ProductDTO
 {
 	public class SearchProductDTO
 	{

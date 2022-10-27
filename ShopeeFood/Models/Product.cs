@@ -2,12 +2,12 @@
 
 namespace ShopeeFood.Models
 {
-    public partial class Product
+    public class Product
     {
         public Product()
         {
-            Orders = new HashSet<Order>();
-            CartItems = new HashSet<CartItem>();
+            Orders = new List<Order>();
+            CartItems = new List<CartItem>();
 
 		}
 
@@ -17,7 +17,7 @@ namespace ShopeeFood.Models
         public int UnitPrice { get; set; }
         public int TypeProduct { get; set; }
         public string? Detail { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
-		public virtual ICollection<CartItem> CartItems { get; set; }
+        public List<Order> Orders { get; set; }
+		public List<CartItem> CartItems { get; set; }
 	}
 }

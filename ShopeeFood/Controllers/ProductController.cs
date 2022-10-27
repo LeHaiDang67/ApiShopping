@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopeeFood.Dtos;
-using ShopeeFood.Dtos.Product;
+using ShopeeFood.Dtos.ProductDTO;
 using ShopeeFood.Interfaces;
 using ShopeeFood.Models;
 

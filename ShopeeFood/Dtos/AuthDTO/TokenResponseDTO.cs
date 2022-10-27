@@ -1,4 +1,4 @@
-﻿namespace ShopeeFood.Dtos
+﻿namespace ShopeeFood.Dtos.AuthDTO
 {
     public class TokenResponseDTO
     {

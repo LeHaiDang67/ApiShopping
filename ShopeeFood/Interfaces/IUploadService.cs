@@ -1,4 +1,4 @@
-﻿using ShopeeFood.Dtos.UploadFile;
+﻿using ShopeeFood.Dtos.UploadFileDTO;
 
 namespace ShopeeFood.Interfaces
 {
